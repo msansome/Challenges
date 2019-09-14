@@ -27,17 +27,22 @@ while name.lower() != "xxx": # Need some way to stop
     name = input("Please enter a name ('xxx' to finish): ")
 
 # Ask if the user wants the output reversed. Get the first letter of their answer and convert it to lower case.
-ans = input("Do you want to print the list in reverse order? (y/n): ").lower()[0]
-while ans != "y" and ans != "n":
+ans = input("Do you want to print the list in reverse order? (y/n): ")[0]
+## A method of schieving this more simply using Python-specific tools is:
+#while not ans.startswith("y") and not ans.startswith("n"): 
+while ans.lower() != "y" and ans.lower() != "n":
     print("Please say 'y' or 'n'")
-    ans = input("Do you want to print the list in reverse order? (y/n): ").lower()[0]
+    ans = input("Do you want to print the list in reverse order? (y/n): ")[0]
 if ans == "y": # If yes - print list in reverse order
     backwards = names[::-1] # Python string slicing - Make a copy in reverse order
     for i in range(len(backwards)):
         print("%s. %s" %(i+1,backwards[i]))
+        ## New 'f sting' method:
+        #print(f'{i+1}. {backwards[i]}')
 else:
     for i in range(len(names)):
         print("%s. %s" %(i+1,names[i]))
+        #print(f'{i+1}. {names[i]}')
     
     
     
