@@ -1,4 +1,3 @@
-
 '''
 OCR 20 Coding Challenges
 
