@@ -25,10 +25,11 @@ flag an error if there are problems.
 Possible answer to Q15 on the OCR 20 Coding Challenges
 Calculate notes / coins to give as change
 '''
+# Note: We have to work in pence to avoid rounding errors.
 
 
-amount = 22.99
-money = [20,10,5,2,1,0.5,0.2,0.1,0.05,0.02,0.01]
+
+money = [2000,1000,500,200,100,50,20,10,5,2,1]
 currency = ["£20","£10","£5","£2","£1","50p","20p","10p","5p","2p","1p"]
 
 
@@ -36,7 +37,7 @@ def make_change(amount):
     change = [] # A list to hold the numbers of notes / coins required.
     for i in money:
         change.append(int(amount // i)) # Go through and integer divide by each demonination
-        amount = round(amount % i,2) # Do modulo division and round the result
+        amount = round((amount % i),2) # Do modulo division and round the result
         #print(amount)
     return change
 
@@ -46,11 +47,18 @@ def make_change(amount):
 ############################
 
 cost = float(input("Please enter the cost of the product. £"))
+cost = cost * 100 # Work in pence to avoid rounding errors
 cash = float(input("Please enter the cash paid. £"))
+cash = cash * 100
+while cash < cost:
+    print("That's not enough to pay for your goods!")
+    cash = float(input("Please enter the cash paid. £"))
+    cash = cash * 100
+
 amount = round((cash - cost),2)
-print(f"You will get £{amount} change")
+print(f"You will get £{amount/100:.2f} change") # :.2f means display 2DP
 change = make_change(amount)
-print(f"To make £{amount} change you need:")
+print(f"To make £{amount/100:.2f} change you need:")
 for i in range(len(money)):
     print(currency[i],"x",change[i])
     
