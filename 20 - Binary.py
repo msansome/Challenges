@@ -1,4 +1,4 @@
-bits = 8
+bits = 32
 maxno = (2**bits)-1
 
 
