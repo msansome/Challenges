@@ -6,7 +6,7 @@ Some proposed solutions
 
 OCR produced a document with 20 coding challenges intended for GCSE students. It is included here.
 
-In this repository I have included some of my examples of code to provide working solutions to these problems using Python. Please note that these are not intended to illustrate the best, the cleverest, or even remotely advanced methods of takling the challenge. In many cases the solutions are far from optimal.
+In this repository I have included some of my examples of code to provide working solutions to these problems using Python. Please note that these are not intended to illustrate the best, the cleverest, or even remotely advanced methods of tackling the challenge. In many cases the solutions are far from optimal.
 
 As the challenges themselves are not really in any order of difficulty, some of the "easier" challenges (which may have a higher number) may have been tackled first and this may be before the students have covered more advanced techniques such as functions etc.
 
