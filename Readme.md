@@ -3,7 +3,7 @@ OCR's 20 Code Challenges
 
 OCR produced a document with 20 coding challenges intended for GCSE students.
 
-In this repository I have included some of my attempts to provided working solutions to these problems using Python. Please note that these are not intended to illustrate the best, the cleverest, or even remotely advanced methods of takling the challenge.
+In this repository I have included some of my attempts to provided working solutions to these problems using Python. Please note that these are not intended to illustrate the best, the cleverest, or even remotely advanced methods of tackling the challenge.
 
 As the challenges themselves are not really in any order of difficulty, some of the "easier" challenges (which may have a higher number) may have been tackled first and this may be before the students have covered more advanced techniques such a functions etc.
 
